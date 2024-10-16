@@ -1,0 +1,169 @@
+@import "flatpickr/dist/flatpickr.min.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+  font-family: 'EnzoWeb W03 Medium';
+  src: url("../../public/fonts/EnzoWeb W03 Medium.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'EnzoWeb W03 Bold';
+  src: url("../../public/fonts/EnzoWeb W03 Bold.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+    --font-family-primary: 'Comfortaa', cursive;
+    --font-size-primary: 0.8rem;
+    --line-height-primary: 1.2rem;
+    --primary-color: #H06113C;
+    --secondary-color: #f40762;
+    --tertiary-color: #tDDDDDD;
+    --spacing-sm: 8px;
+    --spacing-lg: calc(var(--spacing-sm)*2);
+    --bg-primary: linear-gradient(45deg, var(--primary-color), var(--tertiary-color));
+}
+
+
+* {
+  @apply font-enzo;
+}
+
+#navbarDesktop {
+    background: var(--global-secondary-color);
+    color: var(--global-secondary-color);
+}
+
+
+table {
+  @apply divide-y divide-gray-300 w-full rounded-t-xl bg-[#040404] dark:bg-gray-800 text-white;
+}
+
+table > thead {
+  @apply rounded-t-xl;
+}
+
+table > thead > tr > th {
+  @apply text-start px-3 py-3;
+}
+
+table > tbody {
+  @apply bg-white divide-y divide-gray-200;
+}
+
+table > tbody > tr {
+  @apply bg-white dark:bg-gray-700 ;
+}
+
+table > tbody > tr > td {
+  @apply whitespace-nowrap px-3 py-4 text-sm text-gray-500 dark:text-white text-start;
+}
+
+.btn-default {
+  @apply flex items-center justify-center px-3 py-2 text-sm tracking-wide transition-colors duration-200 rounded-lg shrink-0 sm:w-auto gap-x-2 cursor-pointer;
+}
+
+.bg-danger {
+  @apply bg-[#040404] active:translate-y-1 transition-all dark:hover:bg-red-900;
+}
+
+.bg-warning {
+  @apply bg-[#fcc54c] active:translate-y-1 transition-all dark:hover:bg-yellow-900;
+}
+
+.bg-success {
+  @apply bg-green-900/90 active:translate-y-1 transition-all dark:hover:bg-green-900;
+}
+
+.bg-info {
+  @apply bg-blue-600/80 active:translate-y-1 transition-all dark:hover:bg-blue-900 dark:bg-blue-700;
+}
+
+/* Estilizando um checkbox simples */
+input[type="checkbox"] {
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+/* Estilo quando o checkbox está marcado */
+input[type="checkbox"]:checked {
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+/* Estilo quando o cursor está sobre o checkbox */
+input[type="checkbox"]:hover {
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+/* Estilo quando o checkbox está em foco */
+input[type="checkbox"]:focus {
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+/* Estilo quando o checkbox está desabilitado */
+input[type="checkbox"]:disabled {
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+main {
+  width: 100%;
+}
+
+
+body::-webkit-scrollbar, #modalHelper::-webkit-scrollbar {
+  width: 10px;               /* width of the entire scrollbar */
+}
+body::-webkit-scrollbar-track, #modalHelper::-webkit-scrollbar-track {
+  background: black;        /* color of the tracking area */
+
+}
+
+body::-webkit-scrollbar-thumb, #modalHelper::-webkit-scrollbar-thumb {
+  background-color: #0092ec;    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: 3px solid black;  /* creates padding around scroll thumb */
+}
+
+.-z-1 {
+  z-index: -1;
+}
+
+.origin-0 {
+  transform-origin: 0%;
+}
+
+input:focus ~ label,
+input:not(:placeholder-shown) ~ label,
+textarea:focus ~ label,
+textarea:not(:placeholder-shown) ~ label,
+select:focus ~ label,
+select:valid ~ label, select:disabled ~ label  {
+  @apply transform scale-75 -translate-y-4 translate-x-0;
+}
+
+input:focus ~ label,
+select:focus ~ label {
+  @apply text-gray-500 ;
+}
+
+.flatpickr-day.selected {
+  background-color: #0092ec !important; /* Cor de fundo */
+  color: #000000 !important;           /* Cor do texto */
+  border-color: #0092ec !important;    /* Cor da borda */
+}
